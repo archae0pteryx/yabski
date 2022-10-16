@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/ryan/.nvm/versions/node/v16.15.1/bin/node /usr/local/Cellar/yarn/1.22.19/libexec/bin/yarn.js add serde_json
+
+PATH: 
+  /Users/ryan/.rvm/gems/ruby-2.7.6/bin:/Users/ryan/.rvm/gems/ruby-2.7.6@global/bin:/Users/ryan/.rvm/rubies/ruby-2.7.6/bin:/Users/ryan/.nvm/versions/node/v16.15.1/bin:/Users/ryan/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Applications/Little Snitch.app/Contents/Components:/Library/Apple/usr/bin:/Users/ryan/.cargo/bin:/usr/local/sbin:/Users/ryan/.fzf/bin:/Users/ryan/.rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.1
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/serde_json: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:66145:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.22.19/libexec/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
