@@ -1,17 +1,6 @@
 use serde::{Serialize, Deserialize};
-// [{
-// 	"id":2077748985,
-// 	"uuid":"ABB2EB41-D3E1-BDB6-7A7D-F784FD8C547C",
-// 	"index":1,
-// 	"frame":{
-// 		"x":0.0000,
-// 		"y":0.0000,
-// 		"w":1792.0000,
-// 		"h":1120.0000
-// 	},
-// 	"spaces":[1, 2, 3]
-// }]
-#[derive(Serialize, Deserialize, Debug)]
+
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Display {
     pub id: u32,
     pub uuid: String,
@@ -20,7 +9,7 @@ pub struct Display {
     pub spaces: Vec<u32>,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Space {
     pub id: usize,
     pub uuid: String,
@@ -42,7 +31,7 @@ pub struct Space {
     pub is_native_fullscreen: bool,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Window {
     pub id: usize,
     pub pid: usize,
@@ -94,7 +83,7 @@ pub struct Window {
     pub is_grabbed: bool,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Default, Clone)]
 pub struct Frame {
     pub x: f32,
     pub y: f32,

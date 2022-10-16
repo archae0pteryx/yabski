@@ -10,6 +10,8 @@ pub struct CliArgs {
     pub with: With,
 
     pub where_: Option<String>,
+
+    pub to: Option<String>,
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
@@ -18,7 +20,7 @@ pub enum What {
     Create,
     Focus,
     Destroy,
-    RunningApps,
+    Label
 }
 
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
