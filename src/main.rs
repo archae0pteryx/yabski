@@ -7,7 +7,7 @@ use crate::{
 use anyhow::Result;
 use clap::Parser;
 use cli::With;
-use label::LabelCommands;
+use space::LabelOpts;
 use core::fmt::Formatter;
 use query::QueryCommands;
 use serde::{Deserialize, Serialize};
@@ -21,7 +21,6 @@ mod json;
 mod query;
 mod space;
 mod window;
-mod label;
 
 static FIREFOX_APP_LABEL: &str = "Firefox Developer Edition";
 static VS_CODE_APP_LABEL: &str = "Code";
@@ -62,19 +61,21 @@ fn exec_label_option(args: CliArgs) {
     let runner = YabaiRunner::new();
     match args.with {
         With::Space => {
-            LabelCommands::label_space(&runner, args);
+            SpaceCommands::create_labeled_space(&runner, args);
         },
         _ => {}
     }
-
 }
 
 fn exec_create_option(args: CliArgs) {
     let runner = YabaiRunner::new();
-    let ident = args.where_;
-    if let Some(ident) = ident {
-        SpaceCommands::create_space(&runner, ident);
+    let where_ = args.where_.clone();
+    if let Some(label) = where_ {
+        SpaceCommands::create_labeled_space(&runner, args);
+        return ();
     }
+
+    SpaceCommands::create_space(&runner);
 }
 
 fn exec_focus_option(args: CliArgs) {}
